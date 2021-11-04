@@ -25,18 +25,17 @@ class ExploreScreen extends StatelessWidget {
             // 6 ListView() takes 2 args or props: scrollDir and children
             scrollDirection: Axis.vertical,
             children: [
-              // 7 this fx is imported from components.dart
+              // 7 this fx is imported from components.dart, key-val prop added
               TodayRecipeListView(recipes: snapshot.data?.todayRecipes ?? []),
-              // 8
+              // 8 not sure how this fits in, but seems to be a spacer
               const SizedBox(height: 16),
-              // 9
-              // TODO: Replace this with FriendPostListView
+              // 9 this is the listview of friendposts
               FriendPostListView(friendPosts: snapshot.data?.friendPosts ?? []),
 
             ],
           );
         } else {
-          // 10
+          // 10 This fx comes from material.dart
           return const Center(child: CircularProgressIndicator());
         }
       },
