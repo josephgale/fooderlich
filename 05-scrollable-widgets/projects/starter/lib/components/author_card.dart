@@ -1,20 +1,25 @@
-import 'package:flutter/material.dart';
+//This will be used on explore_screen on one of the horizontal scroll cards
 
+import 'package:flutter/material.dart';
 import '../fooderlich_theme.dart';
 import 'circle_image.dart';
 
+//because this is a stateful widget, it will have a state class
 class AuthorCard extends StatefulWidget {
+  //member variables here
   final String authorName;
   final String title;
   final ImageProvider? imageProvider;
 
+  //constructor is a const
   const AuthorCard({
     Key? key,
     required this.authorName,
     required this.title,
     this.imageProvider,
   }) : super(key: key);
-
+  
+  //_AuthorCardState is private CLASS!! duh!!
   @override
   _AuthorCardState createState() => _AuthorCardState();
 }
